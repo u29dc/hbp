@@ -1,0 +1,11 @@
+name: HBP
+description: Hugo Boilerplate
+
+author:
+  name: iinfin
+  homepage: https://iinf.in
+
+homepage: http://github.com/u29dc/hbp
+license: Public Domain
+
+min_version: 0.73.0

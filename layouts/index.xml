@@ -1,0 +1,15 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" 
+	xmlns:atom="https://w3.org/2005/Atom" 
+	xmlns:dc="https://purl.org/dc/elements/1.1/" 
+	xmlns:sy="https://purl.org/rss/1.0/modules/syndication/">
+
+	<channel>
+		<title>{{ .Site.Title }}</title>
+		<link>{{ .Permalink }}</link>
+		<description>{{ .Params.description }}</description>
+		<generator>Hugo</generator>
+		<language>{{ .Site.LanguageCode }}</language>
+		<copyright>{{ .Site.Copyright }}</copyright>
+	</channel>
+</rss>

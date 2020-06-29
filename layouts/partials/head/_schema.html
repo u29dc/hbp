@@ -1,0 +1,16 @@
+{{ printf "<!-- schema -->" | safeHTML }}
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"alternateName": "{{ .Site.Params.username }}",
+		"description": "{{ .Site.Params.description }}",
+		"name": "{{ .Site.Title }}",
+		"sameAs": [
+			{{ range $k, $v := sort .Site.Params.links }}
+				{{ if eq $k 0 }}"{{ $v }}"{{ else }}, "{{ $v }}"{{ end }}
+			{{ end }}
+		],
+		"url": "{{ .Site.BaseURL }}"
+	}
+</script>

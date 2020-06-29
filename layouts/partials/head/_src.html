@@ -1,0 +1,44 @@
+<!-- ########################################################################################### -->
+{{ if .Site.Params.set }}
+{{ printf "<!-- https://npm.im/@u29dc/set -->" | safeHTML }}
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@u29dc/set@1.5.0/dist/css/main.min.css"
+	integrity="sha512-Z+AGHZNUHSRgNUesBXbRDAJVSCrMkBYr9NdZABs/ESMLOVoWR9UW9E3tBScqq8CLEsg4oGoxHYHyAYn4mmRO3w=="
+	crossorigin="anonymous"
+/>
+{{ end }}
+
+<!-- ########################################################################################### -->
+<!-- main css and js -->
+{{ $css := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | resources.PostCSS | resources.Minify }}
+{{ $opts := dict "noComments" true "compact" true "minified" true }}
+{{ $js := resources.Get "js/main.js" | babel $opts | resources.Minify }}
+
+<!-- ########################################################################################### -->
+{{ if eq .Site.Params.resources.inline true }}
+	<!-- inline sources -->
+	{{ with $css }}
+	<style>{{ .Content | safeCSS }}</style>
+	{{ end }}
+
+	{{ with $js }}
+	<script>{{ .Content | safeJS }}</script>
+	{{ end }}
+
+<!-- ######################################### -->
+{{ else }}
+
+	{{ if eq .Site.Params.resources.fingerprint false }}
+		<!-- fingerprint and hash sources -->
+		<link rel="stylesheet" href="{{ $css.Permalink | relURL }}">
+		<script defer src="{{ $js.Permalink | relURL }}"></script>
+
+	{{ else }}
+		{{ $maincss := $css | resources.Fingerprint "sha512" }}
+		{{ $mainjs := $js | resources.Fingerprint "sha512" }}
+		<link rel="stylesheet" href="{{ $maincss.Permalink | relURL }}" integrity="{{ $maincss.Data.Integrity }}" crossorigin="anonymous">
+		<script defer src="{{ $mainjs.Permalink | relURL }}" integrity="{{ $mainjs.Data.Integrity }}" crossorigin="anonymous"></script>
+	{{ end }}
+
+{{ end }}

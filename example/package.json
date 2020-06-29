@@ -1,0 +1,37 @@
+{
+	"author": {
+		"name": "iinfin",
+		"url": "https://iinf.in"
+	},
+	"bugs": {
+		"url": "https://github.com/u29dc/hbp/issues"
+	},
+	"description": "Lorem ipsum dolor sit amet",
+	"devDependencies": {
+		"@babel/cli": "latest",
+		"@babel/core": "latest",
+		"@babel/preset-env": "latest",
+		"cssnano": "latest",
+		"postcss-cli": "latest",
+		"postcss-import": "latest",
+		"postcss-import-url": "latest",
+		"postcss-mixins": "latest",
+		"postcss-nested": "latest",
+		"postcss-preset-env": "latest",
+		"postcss-url": "latest"
+	},
+	"homepage": "https://hbp.netlify.app",
+	"license": "CC0-1.0",
+	"name": "@u29dc/hbp",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/u29dc/hbp"
+	},
+	"scripts": {
+		"build": "npm run hugo",
+		"dev": "hugo server --disableFastRender --renderToDisk  --port 1111",
+		"hugo": "hugo --minify",
+		"theme": "git submodule add -f https://github.com/u29dc/hbp.git themes/hbp && git submodule update --rebase --remote"
+	},
+	"version": "1.0.0"
+}

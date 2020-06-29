@@ -1,0 +1,22 @@
+<!-- ########################################################################################### -->
+{{ printf "<!-- dns prefetch -->" | safeHTML }}
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+<!-- ########################################################################################### -->
+{{ printf "<!-- preconnect -->" | safeHTML }}
+<link rel="preconnect" crossorigin="anonymous" href="https://cdn.jsdelivr.net" />
+
+<!-- ########################################################################################### -->
+{{ printf "<!-- preload -->" | safeHTML }}
+<link rel="preload" crossorigin="anonymous" as="image" type="image/png" href="{{ .Site.BaseURL | relURL }}apple-touch-icon.png" />
+<link rel="preload" crossorigin="anonymous" as="image" type="image/png" href="{{ .Site.BaseURL | relURL }}favicon-16x16.png" />
+<link rel="preload" crossorigin="anonymous" as="image" type="image/png" href="{{ .Site.BaseURL | relURL }}favicon-32x32.png" />
+
+{{ printf "<!-- fonts -->" | safeHTML }}
+<link
+	rel="preload"
+	crossorigin="anonymous"
+	as="font"
+	type="font/woff2"
+	href="https://cdn.jsdelivr.net/npm/inter-ui/Inter%20(web)/Inter-roman.var.woff2"
+/>

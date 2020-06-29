@@ -1,0 +1,48 @@
+####################################################################################################
+canonifyURLs: false
+cleanDestinationDir: true
+copyright: Public Domain
+defaultContentLanguage: en
+disableKinds:
+  - RSS
+  - taxonomy
+  - taxonomyTerm
+
+languages:
+  en:
+    languageCode: en-us
+    languageLang: en
+    languageName: English
+    weight: 0
+
+metaDataFormat: yaml
+noTimes: true
+permalinks:
+  posts: /posts/:filename/
+
+publishDir: public
+relativeURLs: true
+verbose: false
+watch: true
+
+theme: hbp
+
+####################################################################################################
+baseURL: https://hbp.netlify.app/
+title: HBP
+
+params:
+  resources:
+    fingerprint: true
+    inline: false
+
+  set: true
+
+  description: Lorem ipsum
+  email: email@example.com
+  license: https://creativecommons.org/publicdomain/zero/1.0
+  src: https://gitlab.com/u29dc/web/hbp
+  username: #
+
+  links:
+    twitter: https://twitter.com/#
