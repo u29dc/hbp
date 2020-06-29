@@ -1,8 +1,7 @@
 [Settings]
-# https://docs.netlify.com/configure-builds/file-based-configuration/
 
-##################################################
 # build settings
+##################################################
 [build]
   base = "example/"
 
@@ -56,8 +55,8 @@
         manifest-src 'self';
         media-src 'self';
         object-src 'none';
-        script-src 'self' cdn.jsdelivr.net;
-        style-src 'self' cdn.jsdelivr.net;
+        script-src 'self';
+        style-src 'self';
         upgrade-insecure-requests;
     """
     Expect-CT = "max-age=86400; report-uri='https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct'"
