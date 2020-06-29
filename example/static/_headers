@@ -1,10 +1,10 @@
-# Using _headers for example site because netlify.toml doesn't apply headers correctly to custom "base" directory
+# Using _headers for this example site because netlify.toml doesn't apply headers correctly to custom "base" directory
 
 # Ignore this file for usual projects as it'll be covered by netlify.toml
-# See https://gitlab.com/u29dc/web/hbp/-/blob/master/netlify.toml
+# See https://github.com/u29dc/hbp/blob/master/example/netlify.toml
 
 /*
-  Content-Security-Policy: base-uri 'self'; default-src 'none'; font-src 'self' cdn.jsdelivr.net; form-action 'self'; frame-ancestors 'none'; frame-src 'self'; img-src 'self' data:; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net; upgrade-insecure-requests;
+  Content-Security-Policy: base-uri 'self'; default-src 'none'; font-src 'self' cdn.jsdelivr.net; form-action 'self'; frame-ancestors 'none'; frame-src 'self'; img-src 'self' data:; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'; upgrade-insecure-requests;
   Expect-CT: max-age=86400; report-uri='https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct'
   Feature-Policy: accelerometer 'self'; ambient-light-sensor 'self'; autoplay 'self'; camera 'self'; document-domain 'self'; encrypted-media 'self'; fullscreen 'self'; geolocation 'self'; gyroscope 'self'; magnetometer 'self'; microphone 'self'; midi 'self'; payment 'self'; picture-in-picture 'self'; speaker 'self'; sync-xhr 'self'; usb 'self'; vr / xr 'self';
   Referrer-Policy: strict-origin
