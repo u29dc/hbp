@@ -20,3 +20,7 @@
 ```
 git clone https://github.com/u29dc/hbp.git
 ```
+
+## Theme Usage
+
+Take a look at the [example](example) directory.
