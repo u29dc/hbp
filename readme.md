@@ -1,6 +1,6 @@
 # Hugo Boilerplate
 
-<!-- [![Netlify status](https://img.shields.io/netlify/ID?style=flat&colorA=000000&colorB=000000)](https://netlify.com) -->
+[![Netlify status](https://img.shields.io/netlify/6f8ac45e-119f-4840-9f3a-f261bf4609c6?style=flat&colorA=000000&colorB=000000)](https://netlify.com)
 [![Website status](https://img.shields.io/website?url=https%3A%2F%2Fhbp.netlify.app?style=flat&colorA=000000&colorB=000000)](https://hbp.netlify.app)
 [![W3 validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fhbp.netlify.app?style=flat&colorA=000000&colorB=000000)](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fhbp.netlify.app)
 
