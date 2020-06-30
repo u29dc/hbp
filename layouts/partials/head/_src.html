@@ -15,9 +15,8 @@
 {{ $opts := dict "noComments" true "compact" true "minified" true }}
 {{ $js := resources.Get "js/main.js" | babel $opts | resources.Minify }}
 
-<!-- ########################################################################################### -->
 {{ if eq .Site.Params.resources.inline true }}
-	<!-- inline sources -->
+	<!-- inline -->
 	{{ with $css }}
 	<style>{{ .Content | safeCSS }}</style>
 	{{ end }}
@@ -26,7 +25,6 @@
 	<script>{{ .Content | safeJS }}</script>
 	{{ end }}
 
-<!-- ######################################### -->
 {{ else }}
 
 	{{ if eq .Site.Params.resources.fingerprint false }}
