@@ -21,7 +21,7 @@
 		"postcss-url": "latest"
 	},
 	"homepage": "https://hbp.netlify.app",
-	"license": "CC0-1.0",
+	"license": "Unlicense",
 	"name": "@u29dc/hbp",
 	"repository": {
 		"type": "git",
