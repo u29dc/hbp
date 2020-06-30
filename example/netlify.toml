@@ -56,7 +56,7 @@
         media-src 'self';
         object-src 'none';
         script-src 'self';
-        style-src 'self';
+        style-src 'self' cdn.jsdelivr.net;
         upgrade-insecure-requests;
     """
     Expect-CT = "max-age=86400; report-uri='https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct'"
