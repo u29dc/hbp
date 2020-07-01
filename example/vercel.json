@@ -3,5 +3,8 @@
 		"env": {
 			"HUGO_VERSION": "0.73.0"
 		}
+	},
+	"github": {
+		"silent": true
 	}
 }
