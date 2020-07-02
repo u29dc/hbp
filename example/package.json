@@ -1,12 +1,4 @@
 {
-	"author": {
-		"name": "iinfin",
-		"url": "https://iinf.in"
-	},
-	"bugs": {
-		"url": "https://github.com/u29dc/hbp/issues"
-	},
-	"description": "Lorem ipsum dolor sit amet",
 	"devDependencies": {
 		"@babel/cli": "latest",
 		"@babel/core": "latest",
@@ -20,19 +12,11 @@
 		"postcss-preset-env": "latest",
 		"postcss-url": "latest"
 	},
-	"homepage": "https://hbp.netlify.app",
-	"license": "Unlicense",
-	"name": "@u29dc/hbp",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/u29dc/hbp"
-	},
 	"scripts": {
 		"build": "npm run hugo",
 		"dev": "hugo server --disableFastRender --renderToDisk  --port 1111",
 		"hugo": "hugo --minify",
 		"now-build": "npm run theme && npm run build",
 		"theme": "git submodule add -f https://github.com/u29dc/hbp.git themes/hbp && git submodule update --rebase --remote"
-	},
-	"version": "1.0.0"
+	}
 }
