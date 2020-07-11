@@ -15,7 +15,7 @@
 
 ## Development
 
-> Requirements: [Hugo](https://gohugo.io/getting-started/installing) and [Node.js](https://nodejs.org/en/download/current)
+> Requirements: [Hugo](https://github.com/gohugoio/hugo/releases) and [Node.js](https://nodejs.org/en/download/current)
 
 ```
 git clone https://github.com/u29dc/hbp.git
@@ -23,4 +23,4 @@ git clone https://github.com/u29dc/hbp.git
 
 ## Theme Usage
 
-Take a look at the [example](example) directory.
+> [Example](example)
