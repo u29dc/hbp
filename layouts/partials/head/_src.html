@@ -1,16 +1,19 @@
 <!-- ########################################################################################### -->
-{{ if .Site.Params.set }}
-{{ printf "<!-- https://npm.im/@u29dc/set -->" | safeHTML }}
-<link
-	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/@u29dc/set@2.0.0/dist/main.min.css"
-	integrity="sha512-Z+AGHZNUHSRgNUesBXbRDAJVSCrMkBYr9NdZABs/ESMLOVoWR9UW9E3tBScqq8CLEsg4oGoxHYHyAYn4mmRO3w=="
-	crossorigin="anonymous"
-/>
+{{ printf "<!-- EXTRA -->" | safeHTML }}
+{{ if .Site.Params.resources.css }}
+	{{ range .Site.Params.resources.css }}
+		<link rel="stylesheet" href="{{ . }}">
+	{{ end }}
+{{ end }}
+
+{{ if .Site.Params.resources.js }}
+	{{ range .Site.Params.resources.js }}
+		<script src="{{ . }}"></script>
+	{{ end }}
 {{ end }}
 
 <!-- ########################################################################################### -->
-<!-- main css and js -->
+{{ printf "<!-- MAIN -->" | safeHTML }}
 {{ $css := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | resources.PostCSS | resources.Minify }}
 {{ $opts := dict "noComments" true "compact" true "minified" true }}
 {{ $js := resources.Get "js/main.js" | babel $opts | resources.Minify }}

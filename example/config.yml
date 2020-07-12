@@ -36,7 +36,8 @@ params:
     fingerprint: true
     inline: false
 
-  set: true
+    css:
+      - https://cdn.jsdelivr.net/npm/@u29dc/set@2.0.0/dist/main.min.css
 
   description: Lorem ipsum
   email: email@example.com
