@@ -1,0 +1,13 @@
+<!-- ########################################################################################### -->
+{{ printf "<!-- EXTRA RESOURCES -->" | safeHTML }}
+{{ if .Site.Params.resources.css }}
+{{ range .Site.Params.resources.css }}
+<link rel="stylesheet" href="{{ . }}">
+{{ end }}
+{{ end }}
+
+{{ if .Site.Params.resources.js }}
+{{ range .Site.Params.resources.js }}
+<script src="{{ . }}"></script>
+{{ end }}
+{{ end }}

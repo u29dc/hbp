@@ -1,36 +1,5 @@
 <!-- ########################################################################################### -->
-{{ printf "<!-- EXTRA RESOURCES -->" | safeHTML }}
-{{ if .Site.Params.resources.css }}
-	{{ range .Site.Params.resources.css }}
-		<link rel="stylesheet" href="{{ . }}">
-	{{ end }}
-{{ end }}
-
-{{ if .Site.Params.resources.js }}
-	{{ range .Site.Params.resources.js }}
-		<script src="{{ . }}"></script>
-	{{ end }}
-{{ end }}
+{{ partial "resources/_extra.html" . }}
 
 <!-- ########################################################################################### -->
-{{ printf "<!-- MAIN CSS -->" | safeHTML }}
-{{ $css := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | resources.PostCSS | resources.Minify }}
-
-{{ if eq .Site.Params.resources.inline true }}
-	<!-- inline -->
-	{{ with $css }}
-	<style>{{ .Content | safeCSS }}</style>
-	{{ end }}
-
-{{ else }}
-
-	{{ if eq .Site.Params.resources.fingerprint false }}
-		<!-- fingerprint and hash sources -->
-		<link rel="stylesheet" href="{{ $css.Permalink | relURL }}">
-
-	{{ else }}
-		{{ $maincss := $css | resources.Fingerprint "sha512" }}
-		<link rel="stylesheet" href="{{ $maincss.Permalink | relURL }}" integrity="{{ $maincss.Data.Integrity }}" crossorigin="anonymous">
-	{{ end }}
-
-{{ end }}
+{{ partial "resources/css.html" . }}
