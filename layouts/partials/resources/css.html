@@ -10,13 +10,13 @@
 
 {{ else }}
 
-	{{ if eq .Site.Params.resources.fingerprint false }}
+	{{ if eq .Site.Params.resources.fingerprint true }}
 		<!-- fingerprint and hash sources -->
-		<link rel="stylesheet" href="{{ $css.Permalink | relURL }}">
-
-	{{ else }}
 		{{ $maincss := $css | resources.Fingerprint "sha512" }}
 		<link rel="stylesheet" href="{{ $maincss.Permalink | relURL }}" integrity="{{ $maincss.Data.Integrity }}" crossorigin="anonymous">
+		
+		{{ else }}
+		<link rel="stylesheet" href="{{ $css.Permalink | relURL }}">
 	{{ end }}
 
 {{ end }}

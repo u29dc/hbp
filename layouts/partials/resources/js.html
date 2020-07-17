@@ -1,7 +1,7 @@
 <!-- ########################################################################################### -->
 {{ printf "<!-- MAIN JS -->" | safeHTML }}
-{{ $opts := dict "noComments" true "compact" true "minified" true }}
-{{ $js := resources.Get "js/main.js" | babel $opts | resources.Minify }}
+<!-- {{ $opts := dict "noComments" true "compact" true "minified" true }} -->
+{{ $js := resources.Get "js/main.js" | babel (dict "noComments" true "compact" true "minified" true) | resources.Minify }}
 
 {{ if eq .Site.Params.resources.inline true }}
 	<!-- inline -->
@@ -11,13 +11,13 @@
 
 {{ else }}
 
-	{{ if eq .Site.Params.resources.fingerprint false }}
+	{{ if eq .Site.Params.resources.fingerprint true }}
 		<!-- fingerprint and hash sources -->
-		<script defer src="{{ $js.Permalink | relURL }}"></script>
-
-	{{ else }}
 		{{ $mainjs := $js | resources.Fingerprint "sha512" }}
 		<script defer src="{{ $mainjs.Permalink | relURL }}" integrity="{{ $mainjs.Data.Integrity }}" crossorigin="anonymous"></script>
+		
+		{{ else }}
+		<script defer src="{{ $js.Permalink | relURL }}"></script>
 	{{ end }}
 
 {{ end }}
