@@ -33,7 +33,7 @@ title: HBP
 
 params:
   resources:
-    fingerprint: true
+    fingerprint: false
     inline: false
 
     css:
