@@ -1,6 +1,5 @@
 <!-- ########################################################################################### -->
 {{ printf "<!-- MAIN JS -->" | safeHTML }}
-<!-- {{ $opts := dict "noComments" true "compact" true "minified" true }} -->
 {{ $js := resources.Get "js/main.js" | babel (dict "noComments" true "compact" true "minified" true) | resources.Minify }}
 
 {{ if eq .Site.Params.resources.inline true }}
