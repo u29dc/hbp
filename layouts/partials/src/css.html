@@ -1,5 +1,5 @@
 <!-- ########################################################################################### -->
-{{ printf "<!-- MAIN CSS -->" | safeHTML }}
+{{ printf "<!-- CSS -->" | safeHTML }}
 {{ $css := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | resources.PostCSS | resources.Minify }}
 
 {{ if eq .Site.Params.resources.inline true }}

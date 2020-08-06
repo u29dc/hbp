@@ -1,6 +1,9 @@
 <!-- ########################################################################################### -->
-{{ printf "<!-- MAIN JS -->" | safeHTML }}
-{{ $js := resources.Get "js/main.js" | babel (dict "noComments" true "compact" true "minified" true) | resources.Minify }}
+{{ printf "<!-- JS -->" | safeHTML }}
+{{ $worker := resources.Get "js/worker.js" | babel (dict "noComments" true "compact" true "minified" true) | resources.Minify }}
+{{ $main := resources.Get "js/main.js" | babel (dict "noComments" true "compact" true "minified" true) | resources.Minify }}
+
+{{ $js := slice $worker $main | resources.Concat "js/main.js" | js.Build (dict "minify" true) | resources.Minify }}
 
 {{ if eq .Site.Params.resources.inline true }}
 	<!-- inline -->
