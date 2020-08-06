@@ -1,67 +1,50 @@
 "use strict";
 
 var version = "v1::",
-	offline = ["", "/"];
-
-// console.log("WORKER: executing.");
+	offlineFundamentals = ["", "/"];
 
 self.addEventListener("install", function (e) {
-	// console.log("WORKER: install event in progress.");
 	e.waitUntil(
 		caches
 			.open(version + "fundamentals")
 			.then(function (e) {
-				return e.addAll(offline);
+				return e.addAll(offlineFundamentals);
 			})
-			.then(function () {
-				// console.log("WORKER: install completed");
-			})
+			.then(function () {})
 	);
 });
 
 self.addEventListener("fetch", function (e) {
-	// console.log("WORKER: fetch event in progress.");
-	"GET" === e.request.method
-		? e.respondWith(
-				caches.match(e.request).then(function (n) {
-					var t = fetch(e.request)
-						.then(function (n) {
-							var t = n.clone();
-							return (
-								// console.log("WORKER: fetch response from network.", e.request.url),
-								caches
-									.open(version + "pages")
-									.then(function (n) {
-										return n.put(e.request, t);
-									})
-									.then(function () {
-										// console.log("WORKER: fetch response stored in cache.", e.request.url);
-									}),
-								n
-							);
-						}, o)
-						.catch(o);
-					// console.log("WORKER: fetch event", n ? "(cached)" : "(network)", e.request.url), n || t;
-					return null;
-
-					function o() {
+	"GET" === e.request.method &&
+		e.respondWith(
+			caches.match(e.request).then(function (n) {
+				var t = fetch(e.request)
+					.then(function (n) {
+						var t = n.clone();
 						return (
-							// console.log("WORKER: fetch request failed in both cache and network."),
-							new Response("<h1>Service Unavailable</h1>", {
-								status: 503,
-								statusText: "Service Unavailable",
-								headers: new Headers({ "Content-Type": "text/html" }),
-							})
+							caches
+								.open(version + "pages")
+								.then(function (n) {
+									return n.put(e.request, t);
+								})
+								.then(function () {}),
+							n
 						);
-					}
-				})
-		  )
-		: // console.log("WORKER: fetch event ignored.", e.request.method, e.request.url);
-		  null;
+					}, a)
+					.catch(a);
+				return n || t;
+				function a() {
+					return new Response("<h1>Service Unavailable</h1>", {
+						status: 503,
+						statusText: "Service Unavailable",
+						headers: new Headers({ "Content-Type": "text/html" }),
+					});
+				}
+			})
+		);
 });
 
 self.addEventListener("activate", function (e) {
-	// console.log("WORKER: activate event in progress.");
 	e.waitUntil(
 		caches
 			.keys()
@@ -76,8 +59,6 @@ self.addEventListener("activate", function (e) {
 						})
 				);
 			})
-			.then(function () {
-				// console.log("WORKER: activate completed.");
-			})
+			.then(function () {})
 	);
 });
