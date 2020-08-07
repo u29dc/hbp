@@ -25,7 +25,7 @@ git clone https://github.com/u29dc/hbp.git
 
 > [Example](example)
 
-### Features
+This theme doesn't have page layouts, it is intended to be a boilerplate to fast start with various best practices like:
 
 -   Resources
     -   JS
