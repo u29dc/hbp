@@ -42,7 +42,7 @@ params:
   description: Lorem ipsum
   email: email@example.com
   license: https://creativecommons.org/publicdomain/zero/1.0
-  src: https://gitlab.com/u29dc/web/hbp
+  src: https://github.com/u29dc/hbp
   username: #
 
   links:
