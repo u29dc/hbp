@@ -1,7 +1,7 @@
-# Using _headers for this example site because netlify.toml doesn't apply headers correctly to custom "base" directory
+# using _headers for this example site because netlify.toml doesn't apply headers correctly to custom "base" directory
 
-# Ignore this file for usual projects as it'll be covered by netlify.toml
-# See https://github.com/u29dc/hbp/blob/master/example/netlify.toml
+# delete this file for usual projects as it'll be covered by netlify.toml
+# see https://github.com/u29dc/hbp/blob/master/example/netlify.toml
 
 /*
   Content-Security-Policy: base-uri 'self'; default-src 'none'; font-src 'self' cdn.jsdelivr.net; form-action 'self'; frame-ancestors 'none'; frame-src 'self'; img-src 'self' data:; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'; upgrade-insecure-requests;

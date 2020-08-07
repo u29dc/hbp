@@ -3,9 +3,7 @@
 # build settings
 ##################################################
 [build]
-#   base = "example/"
-
-  command = "npm run theme && npm run build"
+  command = "rm -rf themes && npm run theme && npm run build"
   publish = "public/"
 
 # build environment
