@@ -24,3 +24,31 @@ git clone https://github.com/u29dc/hbp.git
 ## Theme Usage
 
 > [Example](example)
+
+### Features
+
+-   Resources
+    -   JS
+        -   [Babel](https://gohugo.io/hugo-pipes/babel/) and [ESBuild](https://gohugo.io/hugo-pipes/js/)
+        -   Compiled, uglified and minified
+    -   SASS
+        -   [PostCSS](https://gohugo.io/hugo-pipes/postcss/)
+        -   Auto prefixed and minified
+    -   Fingerprinting and SRI
+    -   Inline resources
+-   Basic security header tested with:
+    -   [Mozilla Observatory](https://observatory.mozilla.org)
+    -   [Security Headers](https://securityheaders.com)
+    -   [Google CSP Evaluator](https://csp-evaluator.withgoogle.com)
+    -   Already HSTS preloaded when deployed with [Vercel](https://vercel.com/docs/v2/edge-network/encryption)/[Netlify](https://docs.netlify.com/domains-https/https-ssl)
+-   Performance tested with:
+    -   [Google Lighthouse](https://developers.google.com/speed/pagespeed/insights)
+    -   [KeyCDN](https://tools.keycdn.com/performance)
+-   PWA
+    -   Service worker to cache and serve site offline
+-   Other
+    -   Preloading fonts and resources
+    -   SEO and relevant meta
+    -   W3C validation
+-   Deployment
+    -   Configuration for [Vercel](https://vercel.com) and [Netlify](https://netlify.com)
