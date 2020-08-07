@@ -36,12 +36,12 @@ This theme doesn't have page layouts, it is intended to be a boilerplate to fast
         -   Auto prefixed and minified
     -   Fingerprinting and SRI
     -   Inline resources
--   Basic security header tested with:
+-   Security
     -   [Mozilla Observatory](https://observatory.mozilla.org)
     -   [Security Headers](https://securityheaders.com)
     -   [Google CSP Evaluator](https://csp-evaluator.withgoogle.com)
     -   Already HSTS preloaded when deployed with [Vercel](https://vercel.com/docs/v2/edge-network/encryption)/[Netlify](https://docs.netlify.com/domains-https/https-ssl)
--   Performance tested with:
+-   Performance
     -   [Google Lighthouse](https://developers.google.com/speed/pagespeed/insights)
     -   [KeyCDN](https://tools.keycdn.com/performance)
 -   PWA
