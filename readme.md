@@ -17,13 +17,25 @@
 
 > Requirements: [Hugo](https://github.com/gohugoio/hugo/releases) and [Node.js](https://nodejs.org/en/download/current)
 
-```
+```bash
 git clone https://github.com/u29dc/hbp.git
 ```
 
 ## Theme Usage
 
-> [Example](example)
+> Clone the repo or directly download [example](example) from [here](https://downgit.github.io/#/home?url=https://github.com/u29dc/hbp/tree/master/example)
+
+```bash
+# install dependencies and theme
+npm i
+npm run theme
+
+# run on localhost:1111
+npm run dev
+
+# Production build to /public
+npm run build
+```
 
 This theme doesn't have page layouts, it is intended to be a boilerplate to fast start with various best practices like:
 
