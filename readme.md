@@ -33,7 +33,7 @@ npm run theme
 # run on localhost:1111
 npm run dev
 
-# Production build to /public
+# production build to /public
 npm run build
 ```
 
