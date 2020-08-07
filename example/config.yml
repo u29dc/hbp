@@ -4,21 +4,21 @@ cleanDestinationDir: true
 copyright: Public Domain
 defaultContentLanguage: en
 disableKinds:
-  - RSS
-  - taxonomy
-  - taxonomyTerm
+    - RSS
+    - taxonomy
+    - taxonomyTerm
 
 languages:
-  en:
-    languageCode: en-us
-    languageLang: en
-    languageName: English
-    weight: 0
+    en:
+        languageCode: en-us
+        languageLang: en
+        languageName: English
+        weight: 0
 
 metaDataFormat: yaml
 noTimes: true
 permalinks:
-  posts: /posts/:filename/
+    posts: /posts/:filename/
 
 publishDir: public
 relativeURLs: true
@@ -32,18 +32,19 @@ baseURL: https://hbp.netlify.app/
 title: HBP
 
 params:
-  resources:
-    fingerprint: false
-    inline: false
+    resources:
+        fingerprint: false
+        inline: false
 
-    css:
-      - https://cdn.jsdelivr.net/npm/@u29dc/set@2.0.0/dist/main.min.css
+        css:
+            - https://cdn.jsdelivr.net/npm/@u29dc/set@2.0.0/dist/main.min.css
 
-  description: Lorem ipsum
-  email: email@example.com
-  license: https://creativecommons.org/publicdomain/zero/1.0
-  src: https://github.com/u29dc/hbp
-  username: #
+    description: Lorem ipsum
+    email: email@example.com
+    license: https://creativecommons.org/publicdomain/zero/1.0
+    src: https://github.com/u29dc/hbp
+    username: #
 
-  links:
-    twitter: https://twitter.com/#
+    links:
+        twitter: https://twitter.com/#
+        github: https://github.com/#
