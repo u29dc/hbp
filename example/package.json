@@ -4,13 +4,17 @@
 		"@babel/core": "latest",
 		"@babel/preset-env": "latest",
 		"cssnano": "latest",
+		"gulp": "latest",
+		"gulp-shell": "latest",
 		"postcss-cli": "latest",
 		"postcss-import": "latest",
 		"postcss-import-url": "latest",
 		"postcss-mixins": "latest",
 		"postcss-nested": "latest",
 		"postcss-preset-env": "latest",
-		"postcss-url": "latest"
+		"postcss-url": "latest",
+		"terser": "latest",
+		"workbox-build": "latest"
 	},
 	"scripts": {
 		"build": "hugo --minify",

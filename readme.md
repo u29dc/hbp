@@ -48,6 +48,7 @@ This theme doesn't have page layouts, it is intended to be a boilerplate to fast
 -   Preloading fonts and resources
 -   SEO and relevant meta
 -   W3C validation
+-   Offline PWA
 -   Deployment configuration for [Vercel](https://vercel.com) and [Netlify](https://netlify.com)
 -   Performance and security tests
     -   [Google Lighthouse](https://developers.google.com/speed/pagespeed/insights)
