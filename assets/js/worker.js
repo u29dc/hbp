@@ -1,16 +1,18 @@
 window.onload = () => {
 	if ("serviceWorker" in navigator) {
-		// console.log("CLIENT: service worker registration in progress.");
-		navigator.serviceWorker.register("../worker.js").then(
-			null
-			// function () {
-			// 	console.log("CLIENT: service worker registration complete.");
-			// },
-			// function () {
-			// 	console.log("CLIENT: service worker registration failure.");
-			// }
-		);
-	} else {
-		// console.log("CLIENT: service worker is not supported.");
+		navigator.serviceWorker
+			.register("../worker.js")
+			.then(function (reg) {
+				if (reg.installing) {
+					// console.log("[Service worker] installing");
+				} else if (reg.waiting) {
+					// console.log("[Service worker] installed");
+				} else if (reg.active) {
+					// console.log("[Service worker] active");
+				}
+			})
+			.catch(function (error) {
+				// console.log("[Service worker] failed with " + error);
+			});
 	}
 };
