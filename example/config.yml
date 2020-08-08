@@ -1,8 +1,16 @@
-####################################################################################################
+theme: hbp
+
 canonifyURLs: false
 cleanDestinationDir: true
 copyright: Public Domain
 defaultContentLanguage: en
+metaDataFormat: yaml
+noTimes: true
+publishDir: public
+relativeURLs: true
+verbose: false
+watch: true
+
 disableKinds:
     - RSS
     - taxonomy
@@ -14,18 +22,6 @@ languages:
         languageLang: en
         languageName: English
         weight: 0
-
-metaDataFormat: yaml
-noTimes: true
-permalinks:
-    posts: /posts/:filename/
-
-publishDir: public
-relativeURLs: true
-verbose: false
-watch: true
-
-theme: hbp
 
 ####################################################################################################
 baseURL: https://hbp.netlify.app/
