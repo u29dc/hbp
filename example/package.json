@@ -13,10 +13,9 @@
 		"postcss-url": "latest"
 	},
 	"scripts": {
-		"build": "npm run hugo",
+		"build": "hugo --minify",
 		"dev": "hugo server --disableFastRender --renderToDisk  --port 1111",
-		"hugo": "hugo --minify",
 		"now-build": "npm run theme && npm run build",
-		"theme": "git submodule add -f https://github.com/u29dc/hbp.git themes/hbp && git submodule update --rebase --remote"
+		"theme": "git clone https://github.com/u29dc/hbp.git themes/hbp"
 	}
 }
