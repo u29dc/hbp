@@ -37,30 +37,21 @@ npm run dev
 npm run build
 ```
 
-This theme doesn't have page layouts, it is intended to be a boilerplate to fast start with various best practices like:
+## Features
 
--   Resources
-    -   JS
-        -   [Babel](https://gohugo.io/hugo-pipes/babel/) and [ESBuild](https://gohugo.io/hugo-pipes/js/)
-        -   Compiled, uglified and minified
-    -   SASS
-        -   [PostCSS](https://gohugo.io/hugo-pipes/postcss/)
-        -   Auto prefixed and minified
-    -   Fingerprinting and SRI
-    -   Inline resources
--   Security
+This theme doesn't have page layouts, it is intended to be a boilerplate to fast start with various best practices
+
+-   JS sompiled, uglified and minified with [Babel](https://gohugo.io/hugo-pipes/babel/) and [ESBuild](https://gohugo.io/hugo-pipes/js/)
+-   SASS auto prefixed and minified with [PostCSS](https://gohugo.io/hugo-pipes/postcss/)
+-   Fingerprinting and SRI
+-   Inline resources
+-   Preloading fonts and resources
+-   SEO and relevant meta
+-   W3C validation
+-   Deployment configuration for [Vercel](https://vercel.com) and [Netlify](https://netlify.com)
+-   Performance and security
+    -   [Google Lighthouse](https://developers.google.com/speed/pagespeed/insights)
+    -   [KeyCDN](https://tools.keycdn.com/performance)
     -   [Mozilla Observatory](https://observatory.mozilla.org)
     -   [Security Headers](https://securityheaders.com)
     -   [Google CSP Evaluator](https://csp-evaluator.withgoogle.com)
-    -   Already HSTS preloaded when deployed with [Vercel](https://vercel.com/docs/v2/edge-network/encryption)/[Netlify](https://docs.netlify.com/domains-https/https-ssl)
--   Performance
-    -   [Google Lighthouse](https://developers.google.com/speed/pagespeed/insights)
-    -   [KeyCDN](https://tools.keycdn.com/performance)
--   PWA
-    -   Service worker to cache and serve site offline
--   Other
-    -   Preloading fonts and resources
-    -   SEO and relevant meta
-    -   W3C validation
--   Deployment
-    -   Configuration for [Vercel](https://vercel.com) and [Netlify](https://netlify.com)
