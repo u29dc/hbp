@@ -23,7 +23,7 @@ git clone https://github.com/u29dc/hbp.git
 
 ## Theme Usage
 
-> Clone the repo or directly download [example](example) from [here](https://downgit.github.io/#/home?url=https://github.com/u29dc/hbp/tree/master/example)
+Download the [example site directory](example) from [here](https://downgit.github.io/#/home?url=https://github.com/u29dc/hbp/tree/master/example)
 
 ```bash
 # install dependencies and theme
