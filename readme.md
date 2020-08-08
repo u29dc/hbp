@@ -49,7 +49,7 @@ This theme doesn't have page layouts, it is intended to be a boilerplate to fast
 -   SEO and relevant meta
 -   W3C validation
 -   Deployment configuration for [Vercel](https://vercel.com) and [Netlify](https://netlify.com)
--   Performance and security
+-   Performance and security tests
     -   [Google Lighthouse](https://developers.google.com/speed/pagespeed/insights)
     -   [KeyCDN](https://tools.keycdn.com/performance)
     -   [Mozilla Observatory](https://observatory.mozilla.org)
