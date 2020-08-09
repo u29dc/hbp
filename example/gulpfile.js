@@ -7,7 +7,7 @@ gulp.task(
 	gulp.series(
 		function () {
 			return workbox.generateSW({
-				cacheId: "u29dc",
+				cacheId: "hbp",
 				globDirectory: "./public",
 				globIgnores: ["**/index.xml", "**/index.json", "**/sitemap.xml"],
 				globPatterns: ["**/*.{js,css,html}"],
