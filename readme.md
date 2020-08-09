@@ -41,15 +41,15 @@ npm run build
 
 This theme doesn't have page layouts, it is intended to be a boilerplate to fast start with various best practices
 
--   JS sompiled, uglified and minified with [Babel](https://gohugo.io/hugo-pipes/babel/) and [ESBuild](https://gohugo.io/hugo-pipes/js/)
+-   JS compiled, uglified and minified with [Babel](https://gohugo.io/hugo-pipes/babel/) and [ESBuild](https://gohugo.io/hugo-pipes/js/)
 -   SASS auto prefixed and minified with [PostCSS](https://gohugo.io/hugo-pipes/postcss/)
 -   Fingerprinting and SRI
 -   Inline resources
--   Preloading fonts and resources
 -   SEO and relevant meta
--   W3C validation
+-   Preloading fonts and resources
 -   Offline PWA
 -   Deployment configuration for [Vercel](https://vercel.com) and [Netlify](https://netlify.com)
+-   W3C validation
 -   Performance and security tests
     -   [Google Lighthouse](https://developers.google.com/speed/pagespeed/insights)
     -   [KeyCDN](https://tools.keycdn.com/performance)
