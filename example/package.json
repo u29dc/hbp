@@ -17,7 +17,7 @@
 		"workbox-build": "latest"
 	},
 	"scripts": {
-		"build": "hugo --minify",
+		"build": "hugo --minify && gulp",
 		"dev": "hugo server --disableFastRender --renderToDisk  --port 1111",
 		"now-build": "npm run theme && npm run build",
 		"theme": "git clone https://github.com/u29dc/hbp.git themes/hbp"
