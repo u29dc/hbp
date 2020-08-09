@@ -24,7 +24,7 @@ languages:
         weight: 0
 
 ####################################################################################################
-baseURL: https://hbp.netlify.app/
+baseURL: https://hbp.vercel.app/
 title: HBP
 
 params:

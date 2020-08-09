@@ -15,8 +15,8 @@
 			"type": "image/png"
 		}
 	],
-	"name": "Pattern of Possibilities",
-	"short_name": "POP",
-	"start_url": "https://hbp.netlify.app",
+	"name": "Hugo Boilerplate",
+	"short_name": "HBP",
+	"start_url": "https://hbp.vercel.app",
 	"theme_color": "#000000"
 }
