@@ -16,7 +16,7 @@
 				},
 				{
 					"key": "Expect-CT",
-					"value": "max-age:604800, report-uri:\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+					"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
 				},
 				{
 					"key": "Feature-Policy",
@@ -28,7 +28,7 @@
 				},
 				{
 					"key": "Strict-Transport-Security",
-					"value": "max-age:31557600; includesubdomains; preload"
+					"value": "max-age=31557600; includesubdomains; preload"
 				},
 				{
 					"key": "Vary",
