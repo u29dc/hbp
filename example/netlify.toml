@@ -41,7 +41,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Access-Control-Allow-Origin = "*"
     Content-Security-Policy = """
         base-uri 'self';
         connect-src 'self' cdn.jsdelivr.net;
