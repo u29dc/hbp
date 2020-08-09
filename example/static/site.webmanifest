@@ -1,0 +1,22 @@
+{
+	"background_color": "#000000",
+	"display": "standalone",
+	"icons": [
+		{
+			"sizes": "192x192",
+			"src": "/android-chrome-192x192.png",
+			"purpose": "any maskable",
+			"type": "image/png"
+		},
+		{
+			"sizes": "512x512",
+			"src": "/android-chrome-512x512.png",
+			"purpose": "any maskable",
+			"type": "image/png"
+		}
+	],
+	"name": "Pattern of Possibilities",
+	"short_name": "POP",
+	"start_url": "https://hbp.netlify.app",
+	"theme_color": "#000000"
+}
