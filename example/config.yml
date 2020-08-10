@@ -35,7 +35,7 @@ params:
         css:
             - https://cdn.jsdelivr.net/npm/@u29dc/set@2.0.0/dist/main.min.css
 
-    description: Lorem ipsum
+    description: Hugo Boilerplate Theme
     email: email@example.com
     license: https://creativecommons.org/publicdomain/zero/1.0
     src: https://github.com/u29dc/hbp
