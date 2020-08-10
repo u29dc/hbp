@@ -10,11 +10,16 @@ publishDir: public
 relativeURLs: true
 verbose: false
 watch: true
-
 disableKinds:
     - RSS
     - taxonomy
     - taxonomyTerm
+minify:
+    minifyOutput: true
+    tdewolff:
+        html:
+            keepConditionalComments: false
+            keepQuotes: true
 
 languages:
     en:
