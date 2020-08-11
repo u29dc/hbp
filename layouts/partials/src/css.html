@@ -9,7 +9,6 @@
 	{{ end }}
 
 {{ else }}
-
 	{{ if eq .Site.Params.resources.fingerprint true }}
 		<!-- fingerprint and hash sources -->
 		{{ $maincss := $css | resources.Fingerprint "sha512" }}

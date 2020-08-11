@@ -12,7 +12,6 @@
 	{{ end }}
 
 {{ else }}
-
 	{{ if eq .Site.Params.resources.fingerprint true }}
 		<!-- fingerprint and hash sources -->
 		{{ $mainjs := $js | resources.Fingerprint "sha512" }}
