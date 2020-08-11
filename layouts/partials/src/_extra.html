@@ -8,6 +8,6 @@
 
 {{ if .Site.Params.resources.js }}
 {{ range .Site.Params.resources.js }}
-<script async src="{{ . }}"></script>
+<script defer src="{{ . }}"></script>
 {{ end }}
 {{ end }}
