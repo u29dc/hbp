@@ -1,43 +1,13 @@
 [Settings]
 
-# build settings
-##################################################
 [build]
   command = "rm -rf themes && npm run theme && npm run build"
   publish = "public/"
 
-# build environment
 [build.environment]
   HUGO_VERSION = "0.74.3"
-  NODE_VERSION = "14.7.0"
+  NODE_VERSION = "14.8.0"
 
-# build processing
-[build.processing]
-  skip_processing = true
-
-[build.processing.css]
-  bundle = false
-  minify = false
-
-[build.processing.js]
-  bundle = false
-  minify = false
-
-[build.processing.html]
-  pretty_urls = true
-
-[build.processing.images]
-  compress = false
-
-# redirects
-##################################################
-# [[redirects]]
-#   from = "#"
-#   status = 301
-#   to = "#"
-
-# headers
-##################################################
 [[headers]]
   for = "/*"
   [headers.values]
@@ -53,7 +23,7 @@
         manifest-src 'self';
         media-src 'self';
         object-src 'none';
-        script-src 'self';
+        script-src 'self' cdn.jsdelivr.net;
         style-src 'self' cdn.jsdelivr.net;
         upgrade-insecure-requests;
     """
