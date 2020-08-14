@@ -37,8 +37,12 @@ params:
         fingerprint: false
         inline: false
 
-        css:
-            - https://cdn.jsdelivr.net/npm/@u29dc/set@2.0.0/dist/main.min.css
+        # css:
+        #     - src: https://cdn.jsdelivr.net/example.css
+
+        # js:
+        #     - src: https://cdn.jsdelivr.net/example.js
+        #       sri: sha512-xxx
 
     description: Hugo Boilerplate Theme
     email: email@example.com

@@ -1,13 +1,27 @@
 <!-- ########################################################################################### -->
 {{ printf "<!-- EXTRA RESOURCES -->" | safeHTML }}
 {{ if .Site.Params.resources.css }}
-{{ range .Site.Params.resources.css }}
-<link rel="stylesheet" href="{{ . }}">
-{{ end }}
+	{{ range .Site.Params.resources.css }}
+	<link rel="stylesheet" href="{{ .src }}">
+	{{ end }}
 {{ end }}
 
 {{ if .Site.Params.resources.js }}
-{{ range .Site.Params.resources.js }}
-<script defer src="{{ . }}"></script>
-{{ end }}
+	{{ range $in, $js := .Site.Params.resources.js }}
+		{{ if $js.sri }}
+		<script
+			defer
+			src="{{ $js.src }}"
+			integrity="{{ $js.sri }}"
+			crossorigin="anonymous"
+		></script>
+
+		{{ else }}
+		<script
+			defer
+			src="{{ $js.src }}"
+			crossorigin="anonymous"
+		></script>
+		{{ end }}
+	{{ end }}
 {{ end }}
