@@ -1,8 +1,21 @@
 <!-- ########################################################################################### -->
 {{ printf "<!-- EXTRA RESOURCES -->" | safeHTML }}
 {{ if .Site.Params.resources.css }}
-	{{ range .Site.Params.resources.css }}
-	<link rel="stylesheet" href="{{ .src }}">
+	{{ range $in, $css := .Site.Params.resources.css }}
+		{{ if $css.sri }}
+		<link
+			rel="stylesheet"
+			href="{{ $css.src }}"
+			integrity="{{ $css.sri}}"
+			crossorigin="anonymous"
+		/>
+		{{ else }}
+		<link
+			rel="stylesheet"
+			href="{{ $css.src }}"
+			crossorigin="anonymous"
+		/>
+		{{ end }}
 	{{ end }}
 {{ end }}
 

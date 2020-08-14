@@ -37,8 +37,9 @@ params:
         fingerprint: false
         inline: false
 
-        # css:
-        #     - src: https://cdn.jsdelivr.net/example.css
+        css:
+            - src: https://cdn.jsdelivr.net/npm/@u29dc/set@2.0.0/dist/main.min.css
+              sri: sha512-Z+AGHZNUHSRgNUesBXbRDAJVSCrMkBYr9NdZABs/ESMLOVoWR9UW9E3tBScqq8CLEsg4oGoxHYHyAYn4mmRO3w==
 
         # js:
         #     - src: https://cdn.jsdelivr.net/example.js
