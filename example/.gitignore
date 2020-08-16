@@ -3,6 +3,7 @@ node_modules
 package-lock.json
 
 # hugo
+go.sum
 public
 resources
 themes
