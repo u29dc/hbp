@@ -31,7 +31,7 @@ Download the [example site directory](example) from [here](https://downgit.githu
     npm run theme
     ```
 
-2. Use as Hugo module. With Go installed, in `config.yml` [you can](https://gohugo.io/hugo-modules/use-modules/):
+2. Use as Hugo module. With Go installed, in [`config.yml`](example/config.yml) [you can](https://gohugo.io/hugo-modules/use-modules/):
 
     ```yml
     # remove theme config
