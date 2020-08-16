@@ -22,10 +22,41 @@ git clone https://github.com/u29dc/hbp.git
 
 Download the [example site directory](example) from [here](https://downgit.github.io/#/home?url=https://github.com/u29dc/hbp/tree/master/example&fileName=hbp)
 
+### Install theme
+
+1. Use from `themes/` directory:
+
+    ```bash
+    # clone hbp repository to themes/hbp
+    npm run theme
+    ```
+
+2. Use as Hugo module. With Go installed, in `config.yml` [you can](https://gohugo.io/hugo-modules/use-modules/):
+
+    ```yml
+    # remove theme config
+    theme: hbp
+
+    # add hugo module
+    module:
+        imports:
+            - path: github.com/u29dc/hbp
+    ```
+
+    ```bash
+    # initialize module
+    hugo mod init github.com/<user>/<repo>
+
+    # update
+    # and also replace theme script in package.json with
+    hugo mod get -u
+    ```
+
+---
+
 ```bash
-# install dependencies and theme
+# install dependencies
 npm i
-npm run theme
 
 # run on localhost:1111
 npm run dev
