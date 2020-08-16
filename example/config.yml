@@ -1,4 +1,7 @@
 theme: hbp
+# module:
+#     imports:
+#         - path: github.com/u29dc/hbp
 
 canonifyURLs: false
 cleanDestinationDir: true
