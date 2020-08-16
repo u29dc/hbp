@@ -1,2 +1,10 @@
+# node
+node_modules
+package-lock.json
+
+# hugo
 *.log
-tmp
+go.sum
+public
+resources
+themes
