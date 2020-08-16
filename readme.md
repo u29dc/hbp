@@ -20,7 +20,7 @@ git clone https://github.com/u29dc/hbp.git
 
 ## Theme Usage
 
-Download the [example site directory](example) from [here](https://downgit.github.io/#/home?url=https://github.com/u29dc/hbp/tree/master/example&fileName=hbp)
+Download the [example site directory](example) from [here](https://downgit.github.io/#/home?url=https://github.com/u29dc/hbp/tree/master/example&fileName=hbp&rootDirectory=hbp)
 
 ### Install theme
 
