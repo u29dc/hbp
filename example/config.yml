@@ -46,11 +46,11 @@ params:
         #       sri: sha512-xxx
 
     description: Hugo Boilerplate Theme
-    email: email@example.com
+    email: x@example.com
     license: https://creativecommons.org/publicdomain/zero/1.0
     src: https://github.com/u29dc/hbp
-    username: #
+    username: x
 
     links:
-        twitter: https://twitter.com/#
-        github: https://github.com/#
+        twitter: https://twitter.com/x
+        github: https://github.com/x
