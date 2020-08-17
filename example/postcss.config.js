@@ -18,7 +18,14 @@ module.exports = () => ({
 			stage: 1,
 		}),
 		cssnano({
-			preset: "default",
+			preset: [
+				"default",
+				{
+					discardComments: {
+						removeAll: true,
+					},
+				},
+			],
 		}),
 	],
 });
