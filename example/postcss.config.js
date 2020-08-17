@@ -1,5 +1,4 @@
-const
-	cssnano = require("cssnano"),
+const cssnano = require("cssnano"),
 	imports = require("postcss-import"),
 	importUrl = require("postcss-import-url"),
 	mixins = require("postcss-mixins"),
