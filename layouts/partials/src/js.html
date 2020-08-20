@@ -22,3 +22,29 @@
 	{{ end }}
 
 {{ end }}
+
+<!-- ########################################################################################### -->
+{{ if isset .Params.resources "js" }}
+	{{ range .Params.resources.js }}
+		{{ $filepath := (printf "%s%s%s" "./js/" .src ".js") }}
+		{{ $js := resources.Get $filepath | babel (dict "noComments" true "compact" true "minified" true) | resources.Minify }}
+
+		{{ if eq .Site.Params.resources.inline true }}
+			<!-- inline -->
+			{{ with $js }}
+			<script>{{ .Content | safeJS }}</script>
+			{{ end }}
+		
+		{{ else }}
+			{{ if eq .Site.Params.resources.fingerprint true }}
+				<!-- fingerprint and hash sources -->
+				{{ $mainjs := $js | resources.Fingerprint "sha512" }}
+				<script defer src="{{ $mainjs.Permalink | relURL }}" integrity="{{ $mainjs.Data.Integrity }}" crossorigin="anonymous"></script>
+				
+				{{ else }}
+				<script defer src="{{ $js.Permalink | relURL }}"></script>
+			{{ end }}
+		
+		{{ end }}
+	{{ end }}
+{{ end }}
