@@ -17,19 +17,18 @@ disableKinds:
     - RSS
     - taxonomy
     - taxonomyTerm
-minify:
-    minifyOutput: true
-    tdewolff:
-        html:
-            keepConditionalComments: false
-            keepQuotes: true
-
 languages:
     en:
         languageCode: en-us
         languageLang: en
         languageName: English
         weight: 0
+minify:
+    minifyOutput: true
+    tdewolff:
+        html:
+            keepConditionalComments: false
+            keepQuotes: true
 
 ####################################################################################################
 baseURL: https://hbp.vercel.app/
