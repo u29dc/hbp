@@ -12,7 +12,7 @@
 		"postcss-mixins": "^7.0.1",
 		"postcss-nested": "^5.0.1",
 		"postcss-preset-env": "^6.7.0",
-		"postcss-url": "^10.1.0",
+		"postcss-url": "^8.0.0",
 		"terser": "^5.3.8",
 		"workbox-build": "^5.1.4"
 	},
