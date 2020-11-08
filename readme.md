@@ -28,7 +28,7 @@ Download the [example site directory](example) from [here](https://downgit.githu
 
     ```bash
     # clone hbp repository to themes/hbp
-    npm run theme
+    yarn theme
     ```
 
 2. Use as Hugo module. With Go installed, in [`config.yml`](example/config.yml) [you can](https://gohugo.io/hugo-modules/use-modules/):
@@ -56,13 +56,13 @@ Download the [example site directory](example) from [here](https://downgit.githu
 
 ```bash
 # install dependencies
-npm i
+yarn
 
 # run on localhost:1111
-npm run dev
+yarn dev
 
 # production build to /public
-npm run build
+yarn build
 ```
 
 ## Features
